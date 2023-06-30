@@ -13,7 +13,6 @@ class Payments(models.Model):
     total_amount = models.DecimalField(max_digits=8, decimal_places=2)
     payment_time =models.TimeField()
     payment_date =models.DateField()
-    reciept_number =models.CharField(max_length=22)
     status=models.CharField(max_length=30)
 
 def __str__(self):
