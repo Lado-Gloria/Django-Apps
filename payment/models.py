@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Payments(models.Model):
     PAYMENT_METHOD_CHOICES = (
         ("Cash", "Cash"),
@@ -11,11 +10,9 @@ class Payments(models.Model):
     name = models.CharField(max_length=255)
     amount = models.DecimalField(max_digits=8, decimal_places=2)
     total_amount = models.DecimalField(max_digits=8, decimal_places=2)
-    payment_time =models.TimeField()
-    payment_date =models.DateField()
-    status=models.CharField(max_length=30)
+    payment_time = models.TimeField()
+    payment_date = models.DateField()
+    status = models.CharField(max_length=30)
 
-def __str__(self):
+    def __str__(self):
         return self.name
-
-    
